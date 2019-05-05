@@ -7,7 +7,6 @@ Actually, the routes are:
 /add_contact
 
 /edit
-<<<<<<< HEAD
 /delete
 
 For make connection with MYSQL need to have the programme XAMPP or WAMPP. 

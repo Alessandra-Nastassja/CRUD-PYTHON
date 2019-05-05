@@ -1,7 +1,9 @@
 Crud make with frameworks Flask, database MySql and language programme Python.
 
-Actually, The routes are:
+Actually, the routes are:
 
 /add_contact
 /edit
 /delete
+
+For make connection with MYSQL need to have the programme XAMPP or WAMPP. 

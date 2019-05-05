@@ -4,12 +4,13 @@
 
 Actually, The routes are:
 
-º /add_contact
+/add_contact
 
-º /edit
+/edit
 
-º /delete
+/delete
 
 
-# Command for install pip: pip3 install flask flask-mysqldb
+Command for install pip: pip3 install flask flask-mysqldb
 
+Command for run project: python App.py

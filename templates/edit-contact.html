@@ -1,7 +1,22 @@
-<form action="/update/{{contact.0}}" method="post">
-    <input type="text" name="fullname" placeholder="Report your fullname here" value="{{contact.1}}">
-    <input type="text" name="phone" placeholder="Report your phone here" value="{{contact.2}}">
-    <input type="text" name="email" placeholder="Report your email here" value="{{contact.3}}">
+{% extends 'layout.html' %}
 
-    <button type="submit">Save</button>
-</form>
+{% block body %}
+    <h1>Edit contact</h1> <br>
+
+    <form action="/update/{{contact.0}}" method="post">
+        <div class="form-group">
+            <label for="fullname">Fullname</label>
+            <input type="text" class="form-control" name="fullname" placeholder="Report your fullname here" value="{{contact.1}}">
+        </div>
+        <div class="form-group">
+            <label for="fullname">Phone</label>    
+            <input type="text" class="form-control" name="phone" placeholder="Report your phone here" value="{{contact.2}}">
+        </div>
+        <div class="form-group">
+            <label for="fullname">E-mail</label>     
+            <input type="text" class="form-control"  name="email" placeholder="Report your email here" value="{{contact.3}}">
+        </div>    
+
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+{% endblock %}    

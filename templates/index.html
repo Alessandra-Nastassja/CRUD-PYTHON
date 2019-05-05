@@ -1,39 +1,59 @@
-{% with messages = get_flashed_messages() %}
-    {% if messages %}
-        {% for message in messages %}
-            <p>{{message}}</p>
-        {% endfor %}  
-    {% endif %}
-{% endwith %}
+{% extends 'layout.html' %}
 
-<form action="/add_contact" method="post">
-    <input type="text" name="fullname" placeholder="Report your fullname here">
-    <input type="text" name="phone" placeholder="Report your phone here">
-    <input type="text" name="email" placeholder="Report your email here">
+{% block body %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    {{message}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+            {% endfor %}  
+        {% endif %}
+    {% endwith %}
+    
+    <h1>Add new contact</h1> <br>              
 
-    <button type="submit">Save</button>
-</form>
+    <form action="/add_contact" method="post">
+        <div class="form-group">
+            <label for="fullname">Fullname</label>
+            <input type="text" class="form-control" name="fullname" placeholder="Report your fullname here">
+        </div>
+        <div class="form-group">
+            <label for="fullname">Phone</label>
+            <input type="text" class="form-control" name="phone" placeholder="Report your phone here">
+        </div>
+        <div class="form-group">
+            <label for="fullname">E-mail</label> 
+            <input type="text" class="form-control" name="email" placeholder="Report your email here">
+        </div>   
 
-<table>
-    <thead>
-        <tr>
-            <td>Fullname</td>
-            <td>Phone</td>
-            <td>Email</td>
-            <td>Operations</td>
-        </tr>
-    </thead>
-    <tbody>
-        {% for contact in contacts %}
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+    <br>
+    <table class="table table-striped">
+        <thead>
             <tr>
-                <td>{{contact.1}}</td>
-                <td>{{contact.2}}</td>
-                <td>{{contact.3}}</td>
-                <td>
-                    <a href="/edit/{{contact.0}}">Edit</a>
-                    <a href="/delete/{{contact.0}}">Delete</a>
-                </td>
+                <td scope="col">Fullname</td>
+                <td scope="col">Phone</td>
+                <td scope="col">Email</td>
+                <td scope="col">Operations</td>
             </tr>
-        {% endfor %}  
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{contact.1}}</td>
+                    <td>{{contact.2}}</td>
+                    <td>{{contact.3}}</td>
+                    <td>
+                        <a href="/edit/{{contact.0}}" class="btn btn-primary">Edit</a>
+                        <a href="/delete/{{contact.0}}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}  
+        </tbody>
+    </table>
+{% endblock %}    

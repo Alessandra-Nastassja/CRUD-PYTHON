@@ -15,3 +15,4 @@ Command for install pip: pip3 install flask flask-mysqldb
 
 Command for run project: python App.py
 
+For open project in the browser: localhost:3000 

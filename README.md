@@ -1,0 +1,1 @@
+Crud make with frameworks Flask, database MySql and language programme Python.

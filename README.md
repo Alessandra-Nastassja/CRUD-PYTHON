@@ -1,11 +1,15 @@
-Crud make with frameworks Flask, database MySql and language programme Python.
+# Crud make with frameworks Flask, database MySql and language programme Python.
 
 
 
 Actually, The routes are:
 
-/add_contact
+º /add_contact
 
-/edit
+º /edit
 
-/delete
+º /delete
+
+
+# Command for install pip: pip3 install flask flask-mysqldb
+

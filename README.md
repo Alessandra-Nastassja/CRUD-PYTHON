@@ -1,18 +1,26 @@
-# Crud make with frameworks Flask, database MySql and language programme Python.
+#CRUD-Python
+Crud make with frameworks Flask, database MySql and language programme Python.
 
-
-
+*******
 Actually, the routes are:
 
-/add_contact
+- /add_contact
+- /edit
+- /delete
 
-/edit
-/delete
+## *How it working ?* 🚀
 
-For make connection with MYSQL need to have the programme XAMPP or WAMPP. 
+- For make connection with MYSQL need to have the programme **XAMPP or WAMPP**. 
 
-Command for install pip: pip3 install flask flask-mysqldb
+- Command for install pip: 
 
-Command for run project: python App.py
+```
+pip3 install flask flask-mysqldb
+```
 
-For open project in the browser: localhost:3000 
+- Command for run project: 
+
+```
+python App.py
+```
+- For open project in the browser: *localhost:3000*
